@@ -13,12 +13,14 @@
 
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
 <link
   href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
   rel="stylesheet"
 />
 
 <style>
+
 :root{
   --ink:#1a1c20;
   --paper:#fcfcfa;
@@ -58,7 +60,8 @@ a{
   background:var(--red-soft);
 }
 
-/* ---------- navigation ---------- */
+
+/* ---------- NAV ---------- */
 
 nav{
   position:sticky;
@@ -114,7 +117,7 @@ a:focus-visible{
 }
 
 
-/* ---------- hero ---------- */
+/* ---------- HERO ---------- */
 
 header{
   max-width:1060px;
@@ -188,7 +191,7 @@ h1{
 }
 
 
-/* ---------- matching diagram ---------- */
+/* ---------- MATCHING DIAGRAM ---------- */
 
 .match-fig{
   position:relative;
@@ -198,16 +201,6 @@ h1{
   width:100%;
   height:auto;
   display:block;
-}
-
-.match-fig figcaption{
-  font-family:var(--mono);
-  font-size:.68rem;
-  color:var(--gray);
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-top:14px;
-  text-align:center;
 }
 
 .m-node{
@@ -264,7 +257,7 @@ h1{
 }
 
 
-/* ---------- sections ---------- */
+/* ---------- SECTIONS ---------- */
 
 section{
   max-width:1060px;
@@ -288,59 +281,7 @@ h2{
 }
 
 
-/* ---------- about ---------- */
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:48px;
-}
-
-.about-grid h3{
-  font-family:var(--mono);
-  font-size:.72rem;
-  font-weight:500;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--red);
-  margin-bottom:16px;
-}
-
-.edu-list{
-  list-style:none;
-}
-
-.edu-list li{
-  padding:12px 0;
-  border-bottom:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  gap:16px;
-  align-items:baseline;
-}
-
-.edu-list li:last-child{
-  border-bottom:none;
-}
-
-.edu-deg{
-  font-weight:500;
-}
-
-.edu-inst{
-  color:var(--gray);
-  font-size:.9rem;
-}
-
-.edu-yr{
-  font-family:var(--mono);
-  font-size:.8rem;
-  color:var(--gray);
-  white-space:nowrap;
-}
-
-
-/* ---------- publications ---------- */
+/* ---------- RESEARCH ---------- */
 
 .pub-group{
   margin-bottom:44px;
@@ -433,7 +374,7 @@ h3.pub-group-title{
 }
 
 
-/* ---------- teaching ---------- */
+/* ---------- TEACHING ---------- */
 
 .teach-grid{
   display:grid;
@@ -462,7 +403,7 @@ h3.pub-group-title{
 }
 
 
-/* ---------- footer ---------- */
+/* ---------- FOOTER ---------- */
 
 footer{
   border-top:1px solid var(--line);
@@ -497,7 +438,7 @@ footer{
 }
 
 
-/* ---------- responsive ---------- */
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width:800px){
 
@@ -511,7 +452,6 @@ footer{
     margin:0 auto;
   }
 
-  .about-grid,
   .teach-grid{
     grid-template-columns:1fr;
     gap:36px;
@@ -530,22 +470,31 @@ footer{
 </style>
 </head>
 
+
 <body>
 
+
+<!-- NAVIGATION -->
+
 <nav>
+
   <div class="nav-inner">
 
-    <a class="nav-name" href="#top">Umut Dur</a>
+    <a class="nav-name" href="#top">
+      Umut Dur
+    </a>
 
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#teaching">Teaching</a></li>
     </ul>
 
   </div>
+
 </nav>
 
+
+<!-- HERO -->
 
 <header id="top">
 
@@ -582,12 +531,18 @@ footer{
   </div>
 
 
-  <figure aria-hidden="true" class="match-fig">
+  <figure class="match-fig" aria-hidden="true">
 
     <svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
 
-      <text class="m-label" x="38" y="26">AGENTS</text>
-      <text class="m-label" x="252" y="26">OBJECTS</text>
+      <text x="38" y="26" class="m-label">
+        AGENTS
+      </text>
+
+      <text x="252" y="26" class="m-label">
+        OBJECTS
+      </text>
+
 
       <path
         class="m-edge"
@@ -609,6 +564,7 @@ footer{
         d="M78 105 C 170 105, 170 195, 262 195"
       />
 
+
       <path
         class="m-edge hl"
         d="M78 60 C 170 60, 170 60, 262 60"
@@ -618,6 +574,7 @@ footer{
         class="m-edge hl"
         d="M78 195 C 170 195, 170 105, 262 105"
       />
+
 
       <circle class="m-node hl" cx="66" cy="60" r="12"/>
       <circle class="m-node" cx="66" cy="105" r="12"/>
@@ -638,67 +595,8 @@ footer{
 </header>
 
 
-<section id="about">
 
-  <div class="sec-head">
-    <h2>About</h2>
-  </div>
-
-  <div class="about-grid">
-
-    <div>
-
-      <h3>Background</h3>
-
-      <p>
-        I am a Professor of Economics and University Faculty Scholar at
-        North Carolina State University. My research focuses on market
-        design, matching theory, and game theory — with applications to
-        school choice, affirmative action and reserve systems, teacher
-        assignment, and the allocation of scarce resources.
-      </p>
-
-    </div>
-
-
-    <div>
-
-      <h3>Education</h3>
-
-      <ul class="edu-list">
-
-        <li>
-          <span>
-            <span class="edu-deg">Ph.D. Economics</span><br/>
-            <span class="edu-inst">University of Texas at Austin</span>
-          </span>
-          <span class="edu-yr">2013</span>
-        </li>
-
-        <li>
-          <span>
-            <span class="edu-deg">M.A. Economics</span><br/>
-            <span class="edu-inst">Boğaziçi University</span>
-          </span>
-          <span class="edu-yr">2009</span>
-        </li>
-
-        <li>
-          <span>
-            <span class="edu-deg">B.S. Industrial Engineering</span><br/>
-            <span class="edu-inst">Boğaziçi University</span>
-          </span>
-          <span class="edu-yr">2006</span>
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</section>
-
+<!-- RESEARCH -->
 
 <section id="research">
 
@@ -707,779 +605,7 @@ footer{
   </div>
 
 
-  <div class="pub-group">
-
-    <h3 class="pub-group-title">
-      Publications &amp; Forthcoming
-    </h3>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2026</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0899825625001757">
-            Improving the Deferred Acceptance with Minimal Compromise
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan, Arda Gitmez, and Ozgur Yilmaz ·
-          <em>Games and Economic Behavior</em>
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2026</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://link.springer.com/article/10.1007/s00182-025-00975-x">
-            College admissions with budget complementarities
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Azar Abizada ·
-          <em>International Journal of Game Theory</em>
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2025</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://onlinelibrary.wiley.com/doi/10.1111/sjoe.70003">
-            Seat Allocation Problem in Public Transportation
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan and Ayse Dur ·
-          <em>The Scandinavian Journal of Economics</em>
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2025</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000433">
-            The Attraction of Magnet Schools: Evidence from Embedded Lotteries in School Assignment
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Robert Hammond, Matthew Lenard, Melinda Morrill,
-          Thayer Morrill, and Colleen Paeplow ·
-          <em>Economics of Education Review</em>
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2025</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0165176524006256">
-            Wastefulness in Sequential School Choice with Public and Private Schools
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Tommy Andersson, Sinan Ertemel, and Onur Kesten ·
-          <em>Economics Letters</em>, 247
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2024</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0899825624000708">
-            Capacity Design in School Choice
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan and Martin Van der Linden ·
-          <em>Games and Economic Behavior</em>, 146 ·
-          <span class="pub-extra">
-            <a href="https://drive.google.com/file/d/1BrTO19D8rZgMMOQ5RRaiI9Af40b1RMWn/view?usp=sharing">
-              older version
-            </a>
-          </span>
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2024</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://link.springer.com/article/10.1007/s00355-024-01534-1">
-            Partitionable Choice Functions and Stability
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Thayer Morrill and Will Phan ·
-          <em>Social Choice and Welfare</em>, 63
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2024</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://link.springer.com/article/10.1007/s00355-024-01527-0">
-            Sequential School Choice with Public and Private Schools
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Tommy Andersson, Sinan Ertemel, and Onur Kesten ·
-          <em>Social Choice and Welfare</em>, 63
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2024</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0165489624000416">
-            Rawlsian Matching
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan ·
-          <em>Mathematical Social Sciences</em>, 129
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2024</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0165489624000374">
-            A characterization of the top trading cycles mechanism for the school choice problem
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Scott Paiement ·
-          <em>Mathematical Social Sciences</em>, 129
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2024</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0165489624000179">
-            Increasing the representation of a targeted type in a reserve system
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Abdullah Almeer, Will Harris, Greg Hauser,
-          William Phan, and Yanning Zhang ·
-          <em>Mathematical Social Sciences</em>, 129
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2023</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0304406823001003">
-            Fairness under affirmative action policies with overlapping reserves
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Yanning Zhang ·
-          <em>Journal of Mathematical Economics</em>, 109
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2023</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://onlinelibrary.wiley.com/doi/10.1111/sjoe.12515">
-            Strategy-proof size improvement: is it possible?
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan ·
-          <em>The Scandinavian Journal of Economics</em>, 125
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2023</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jpet.12605">
-            Responsiveness to Priority-Based Affirmative Action Policy in School Choice
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Yifan Xie ·
-          <em>Journal of Public Economic Theory</em>, 25
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2022</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://onlinelibrary.wiley.com/doi/10.3982/TE4086">
-            Family ties: School assignment with siblings
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Thayer Morrill and William Phan ·
-          <em>Theoretical Economics</em>, 17
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2022</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.aeaweb.org/articles?id=10.1257/mic.20180386">
-            Deduction Dilemmas: The Taiwan Assignment Mechanism
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Parag Pathak, Fei Song, and Tayfun Sönmez ·
-          <em>American Economic Journal: Microeconomics</em>, 14
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2021</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.mdpi.com/2073-4336/12/2/37">
-            School Choice with Hybrid Schedules
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan and William Harris ·
-          <em>GAMES: Special Issue on School Choice</em>
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2021</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0022053121001617">
-            Sequential school choice: Theory and evidence from the field and lab
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Robert Hammond and Onur Kesten ·
-          <em>Journal of Economic Theory</em>, 198
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2020</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022053118302801">
-            Explicit vs. Statistical Targeting in Affirmative Action:
-            Theory and Evidence from Chicago's Exam Schools
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Parag Pathak and Tayfun Sönmez ·
-          <em>Journal of Economic Theory</em>, 187
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2020</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0899825619301046">
-            What You Don't Know Can Help You in School Assignment
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Thayer Morrill ·
-          <em>Games and Economic Behavior</em>, 120: 246–256
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2020</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://link.springer.com/article/10.1007/s00355-020-01252-4">
-            Constrained Stability in Two-Sided Matching Markets
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan ·
-          <em>Social Choice and Welfare</em>, 55: 477–494
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2019</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/701358">
-            Two-Sided Matching via Balanced Exchange
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Utku Ünver ·
-          <em>Journal of Political Economy</em>, 127: 1156–1177
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2019</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://onlinelibrary.wiley.com/doi/10.3982/TE2482">
-            School choice under partial fairness
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Arda Gitmez and Ozgur Yilmaz ·
-          <em>Theoretical Economics</em>, 14: 1309–1346
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2019</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://link.springer.com/article/10.1007/s00199-018-1133-9">
-            Sequential versus simultaneous assignment systems and two applications
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Onur Kesten ·
-          <em>Economic Theory</em>, 68: 251–283
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2019</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304406818301356">
-            School Choice with Neighbors
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Thomas Wiseman ·
-          <em>Journal of Mathematical Economics</em>, 83: 101–109
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2019</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0165489618300647">
-            The modified Boston mechanism
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          <em>Mathematical Social Sciences</em>, 101: 31–40
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2018</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/699974">
-            Reserve Design: Unintended Consequences and the Demise of Boston's Walk Zones
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Scott Kominers, Parag Pathak, and Tayfun Sönmez ·
-          <em>Journal of Political Economy</em>, 126: 2457–2479
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2018</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://link.springer.com/article/10.1007/s10683-018-9594-z">
-            The Secure Mechanism: Theory and Experiments
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Robert Hammond and Thayer Morrill ·
-          <em>Experimental Economics</em>, 22: 918–953 ·
-          <span class="pub-extra">
-            <a href="http://www4.ncsu.edu/~rghammon/sBM_Supplemental_App.pdf">
-              supplemental appendix
-            </a>
-          </span>
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2018</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0899825617301756">
-            Competitive Equilibria in School Assignment
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Thayer Morrill ·
-          <em>Games and Economic Behavior</em>, 108: 269–274
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2018</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.aeaweb.org/articles?id=10.1257/pol.20160132">
-            Identifying the Harm of Manipulable School-Choice Mechanisms
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Robert Hammond and Thayer Morrill ·
-          <em>American Economic Journal: Economic Policy</em>,
-          10(1): 187–213
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2018</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://dl.acm.org/doi/10.1145/3219166.3219201">
-            First-Choice Maximal and First-Choice Stable School Choice Mechanisms
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Timo Mennle and Sven Seuken ·
-          <em>
-            EC'18 Proceedings of the 2018 ACM Conference on Economics and Computation
-          </em>:
-          251–268
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2017</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176516304827">
-            Incompatibility of Stability and Consistency
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan ·
-          <em>Economics Letters</em>, 150: 135–137
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2017</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304406816301136">
-            When Preference Misreporting is Harm[less]ful?
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Oguz Afacan ·
-          <em>Journal of Mathematical Economics</em>,
-          72: 16–24
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="pub">
-
-      <span class="pub-year">2016</span>
-
-      <div>
-
-        <p class="pub-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S016517651630026X">
-            Many-to-One Matchings without Substitutability
-          </a>
-        </p>
-
-        <p class="pub-meta">
-          with Devrim Ikizler ·
-          <em>Economics Letters</em>, 144: 123–126
-        </p>
-
-      </div>
-
-    </article>
-
-  </div>
-
+  <!-- WORKING PAPERS -->
 
   <div class="pub-group">
 
@@ -1605,9 +731,11 @@ footer{
       <div>
 
         <p class="pub-title">
+
           <a href="https://drive.google.com/file/d/1wIHkH4hwuQIoq4HD9gPKfMdj0hVpAt-Q/view?usp=sharing">
             Who Gets the Bonus? High School Admission Reforms in China
           </a>
+
         </p>
 
         <p class="pub-meta">
@@ -1626,9 +754,11 @@ footer{
       <div>
 
         <p class="pub-title">
+
           <a href="https://drive.google.com/file/d/17QUfSwhqk9nv-ocyWPlUi8snEgTI8c8O/view?usp=drive_link">
             Market Design of College-Major Switches for Reducing Student-Major Mismatch
           </a>
+
         </p>
 
         <p class="pub-meta">
@@ -1647,9 +777,11 @@ footer{
       <div>
 
         <p class="pub-title">
+
           <a href="https://drive.google.com/file/d/1ShFXdv1UGikKr8FZsTrCHEheOf6Dx1bt/view?usp=sharing">
             Allocating Medical Resources During a Pandemic
           </a>
+
         </p>
 
         <p class="pub-meta">
@@ -1662,8 +794,888 @@ footer{
 
   </div>
 
+
+
+  <!-- PUBLICATIONS -->
+
+  <div class="pub-group">
+
+    <h3 class="pub-group-title">
+      Publications &amp; Forthcoming
+    </h3>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2026</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0899825625001757">
+            Improving the Deferred Acceptance with Minimal Compromise
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan, Arda Gitmez, and Ozgur Yilmaz ·
+          <em>Games and Economic Behavior</em>
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2026</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://link.springer.com/article/10.1007/s00182-025-00975-x">
+            College admissions with budget complementarities
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Azar Abizada ·
+          <em>International Journal of Game Theory</em>
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2026</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.tandfonline.com/doi/full/10.1080/09645292.2026.2681157">
+            A Path to Increased Representation of Top 10% and Minority Students in Texas College Admission
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Abdullah Almeer and Robert Hammond ·
+          <em>Education Economics</em>
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2025</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://onlinelibrary.wiley.com/doi/10.1111/sjoe.70003">
+            Seat Allocation Problem in Public Transportation
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan and Ayse Dur ·
+          <em>The Scandinavian Journal of Economics</em>
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2025</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000433">
+            The Attraction of Magnet Schools: Evidence from Embedded Lotteries in School Assignment
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Robert Hammond, Matthew Lenard, Melinda Morrill,
+          Thayer Morrill, and Colleen Paeplow ·
+          <em>Economics of Education Review</em>
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2025</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0165176524006256">
+            Wastefulness in Sequential School Choice with Public and Private Schools
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Tommy Andersson, Sinan Ertemel, and Onur Kesten ·
+          <em>Economics Letters</em>, 247
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2024</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0899825624000708">
+            Capacity Design in School Choice
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan and Martin Van der Linden ·
+          <em>Games and Economic Behavior</em>, 146 ·
+
+          <span class="pub-extra">
+
+            <a href="https://drive.google.com/file/d/1BrTO19D8rZgMMOQ5RRaiI9Af40b1RMWn/view?usp=sharing">
+              older version
+            </a>
+
+          </span>
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2024</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://link.springer.com/article/10.1007/s00355-024-01534-1">
+            Partitionable Choice Functions and Stability
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Thayer Morrill and Will Phan ·
+          <em>Social Choice and Welfare</em>, 63
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2024</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://link.springer.com/article/10.1007/s00355-024-01527-0">
+            Sequential School Choice with Public and Private Schools
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Tommy Andersson, Sinan Ertemel, and Onur Kesten ·
+          <em>Social Choice and Welfare</em>, 63
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2024</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0165489624000416">
+            Rawlsian Matching
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan ·
+          <em>Mathematical Social Sciences</em>, 129
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2024</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0165489624000374">
+            A characterization of the top trading cycles mechanism for the school choice problem
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Scott Paiement ·
+          <em>Mathematical Social Sciences</em>, 129
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2024</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0165489624000179">
+            Increasing the representation of a targeted type in a reserve system
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Abdullah Almeer, Will Harris, Greg Hauser,
+          William Phan, and Yanning Zhang ·
+          <em>Mathematical Social Sciences</em>, 129
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2023</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0304406823001003">
+            Fairness under affirmative action policies with overlapping reserves
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Yanning Zhang ·
+          <em>Journal of Mathematical Economics</em>, 109
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2023</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://onlinelibrary.wiley.com/doi/10.1111/sjoe.12515">
+            Strategy-proof size improvement: is it possible?
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan ·
+          <em>The Scandinavian Journal of Economics</em>, 125
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2023</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jpet.12605">
+            Responsiveness to Priority-Based Affirmative Action Policy in School Choice
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Yifan Xie ·
+          <em>Journal of Public Economic Theory</em>, 25
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2022</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://onlinelibrary.wiley.com/doi/10.3982/TE4086">
+            Family ties: School assignment with siblings
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Thayer Morrill and William Phan ·
+          <em>Theoretical Economics</em>, 17
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2022</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.aeaweb.org/articles?id=10.1257/mic.20180386">
+            Deduction Dilemmas: The Taiwan Assignment Mechanism
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Parag Pathak, Fei Song, and Tayfun Sönmez ·
+          <em>American Economic Journal: Microeconomics</em>, 14
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2021</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.mdpi.com/2073-4336/12/2/37">
+            School Choice with Hybrid Schedules
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan and William Harris ·
+          <em>GAMES: Special Issue on School Choice</em>
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2021</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0022053121001617">
+            Sequential school choice: Theory and evidence from the field and lab
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Robert Hammond and Onur Kesten ·
+          <em>Journal of Economic Theory</em>, 198
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2020</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022053118302801">
+            Explicit vs. Statistical Targeting in Affirmative Action:
+            Theory and Evidence from Chicago's Exam Schools
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Parag Pathak and Tayfun Sönmez ·
+          <em>Journal of Economic Theory</em>, 187
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2020</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0899825619301046">
+            What You Don't Know Can Help You in School Assignment
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Thayer Morrill ·
+          <em>Games and Economic Behavior</em>, 120: 246–256
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2020</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://link.springer.com/article/10.1007/s00355-020-01252-4">
+            Constrained Stability in Two-Sided Matching Markets
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan ·
+          <em>Social Choice and Welfare</em>, 55: 477–494
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2019</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/701358">
+            Two-Sided Matching via Balanced Exchange
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Utku Ünver ·
+          <em>Journal of Political Economy</em>, 127: 1156–1177
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2019</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://onlinelibrary.wiley.com/doi/10.3982/TE2482">
+            School choice under partial fairness
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Arda Gitmez and Ozgur Yilmaz ·
+          <em>Theoretical Economics</em>, 14: 1309–1346
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2019</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://link.springer.com/article/10.1007/s00199-018-1133-9">
+            Sequential versus simultaneous assignment systems and two applications
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Onur Kesten ·
+          <em>Economic Theory</em>, 68: 251–283
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2019</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304406818301356">
+            School Choice with Neighbors
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Thomas Wiseman ·
+          <em>Journal of Mathematical Economics</em>, 83: 101–109
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2019</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/pii/S0165489618300647">
+            The modified Boston mechanism
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          <em>Mathematical Social Sciences</em>, 101: 31–40
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2018</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/699974">
+            Reserve Design: Unintended Consequences and the Demise of Boston's Walk Zones
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Scott Kominers, Parag Pathak, and Tayfun Sönmez ·
+          <em>Journal of Political Economy</em>, 126: 2457–2479
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2018</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://link.springer.com/article/10.1007/s10683-018-9594-z">
+            The Secure Mechanism: Theory and Experiments
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Robert Hammond and Thayer Morrill ·
+          <em>Experimental Economics</em>, 22: 918–953 ·
+
+          <span class="pub-extra">
+
+            <a href="http://www4.ncsu.edu/~rghammon/sBM_Supplemental_App.pdf">
+              supplemental appendix
+            </a>
+
+          </span>
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2018</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0899825617301756">
+            Competitive Equilibria in School Assignment
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Thayer Morrill ·
+          <em>Games and Economic Behavior</em>, 108: 269–274
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2018</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.aeaweb.org/articles?id=10.1257/pol.20160132">
+            Identifying the Harm of Manipulable School-Choice Mechanisms
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Robert Hammond and Thayer Morrill ·
+          <em>American Economic Journal: Economic Policy</em>,
+          10(1): 187–213
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2018</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://dl.acm.org/doi/10.1145/3219166.3219201">
+            First-Choice Maximal and First-Choice Stable School Choice Mechanisms
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Timo Mennle and Sven Seuken ·
+          <em>
+            EC'18 Proceedings of the 2018 ACM Conference on Economics and Computation
+          </em>:
+          251–268
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2017</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176516304827">
+            Incompatibility of Stability and Consistency
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan ·
+          <em>Economics Letters</em>, 150: 135–137
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2017</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304406816301136">
+            When Preference Misreporting is Harm[less]ful?
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Oguz Afacan ·
+          <em>Journal of Mathematical Economics</em>, 72: 16–24
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="pub">
+
+      <span class="pub-year">2016</span>
+
+      <div>
+
+        <p class="pub-title">
+
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S016517651630026X">
+            Many-to-One Matchings without Substitutability
+          </a>
+
+        </p>
+
+        <p class="pub-meta">
+          with Devrim Ikizler ·
+          <em>Economics Letters</em>, 144: 123–126
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
 </section>
 
+
+
+<!-- TEACHING -->
 
 <section id="teaching">
 
@@ -1726,6 +1738,9 @@ footer{
 </section>
 
 
+
+<!-- FOOTER -->
+
 <footer>
 
   <div class="foot-inner">
@@ -1745,6 +1760,7 @@ footer{
   </div>
 
 </footer>
+
 
 </body>
 </html>
