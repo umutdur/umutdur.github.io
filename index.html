@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -37,7 +38,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(252,252,250,.92);backdrop-f
 a:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
 
 /* ---------- hero ---------- */
-header{max-width:1060px;margin:0 auto;padding:72px 24px 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+header{max-width:1060px;margin:0 auto;padding:56px 24px 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
 .kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
 h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4rem);line-height:1.05;letter-spacing:-.01em;margin-bottom:20px}
 .hero-sub{font-size:1.06rem;color:var(--gray);max-width:44ch;margin-bottom:14px}
@@ -66,8 +67,8 @@ h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4rem);lin
 }
 
 /* ---------- sections ---------- */
-section{max-width:1060px;margin:0 auto;padding:56px 24px;border-top:1px solid var(--line)}
-.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
+section{max-width:1060px;margin:0 auto;padding:44px 24px;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:28px}
 h2{font-family:var(--serif);font-weight:500;font-size:1.9rem;letter-spacing:-.01em}
 .sec-count{font-family:var(--mono);font-size:.75rem;color:var(--gray)}
 
@@ -82,10 +83,10 @@ h2{font-family:var(--serif);font-weight:500;font-size:1.9rem;letter-spacing:-.01
 .edu-yr{font-family:var(--mono);font-size:.8rem;color:var(--gray);white-space:nowrap}
 
 /* ---------- publications ---------- */
-.pub-group{margin-bottom:44px}
+.pub-group{margin-bottom:34px}
 .pub-group:last-child{margin-bottom:0}
 h3.pub-group-title{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:8px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
-.pub{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:baseline}
+.pub{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:baseline}
 .pub-year{font-family:var(--mono);font-size:.8rem;color:var(--gray)}
 .pub-title{font-family:var(--serif);font-size:1.18rem;font-weight:500;line-height:1.35;margin-bottom:4px}
 .pub-title a{text-decoration:none;background-image:linear-gradient(var(--red),var(--red));background-size:0% 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .25s}
@@ -103,8 +104,8 @@ h3.pub-group-title{font-family:var(--mono);font-size:.72rem;font-weight:500;lett
 .course-code{font-family:var(--mono);font-size:.8rem;color:var(--red);white-space:nowrap;min-width:74px}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);margin-top:40px}
-.foot-inner{max-width:1060px;margin:0 auto;padding:48px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px}
+footer{border-top:1px solid var(--line);margin-top:28px}
+.foot-inner{max-width:1060px;margin:0 auto;padding:36px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px}
 .foot-inner a{color:var(--gray);font-size:.85rem;text-decoration:none}
 .foot-inner a:hover{color:var(--red)}
 .foot-name{font-family:var(--serif);font-size:1.05rem;color:var(--ink)}
@@ -145,10 +146,10 @@ footer{border-top:1px solid var(--line);margin-top:40px}
 <header id="top">
 <div>
 <h1>Umut Dur</h1>
-<p class="hero-sub">Department of Economics, North Carolina State University</p>
+<p class="hero-sub">Professor of Economics, North Carolina State University</p>
 <p class="hero-fields">Market design · Matching theory · Game theory</p>
 <div class="hero-actions">
-<a class="btn btn-primary cv-toggle" href="#cv" aria-controls="cv" aria-expanded="false">Curriculum Vitae</a>
+<a aria-controls="cv" aria-expanded="false" class="btn btn-primary cv-toggle" href="#cv">Curriculum Vitae</a>
 <a class="btn btn-ghost" href="mailto:umutdur@gmail.com">umutdur@gmail.com</a>
 </div>
 </div>
@@ -179,19 +180,69 @@ footer{border-top:1px solid var(--line);margin-top:40px}
 </svg>
 </figure>
 </header>
-<section id="cv" class="cv-viewer" hidden>
-  <div class="cv-head">
-    <h2>Curriculum Vitae</h2>
-    <a class="cv-close" href="#top" aria-label="Close curriculum vitae">Close ×</a>
-  </div>
-  <div class="cv-frame-wrap">
-    <iframe src="https://www.dropbox.com/scl/fi/fg11s2ejsn9ytcdmrampp/cv_dur_2026-april.pdf?rlkey=pu8kifgnsjx7qjdq76kic3qb7&raw=1" title="Umut Dur Curriculum Vitae" loading="lazy"></iframe>
-  </div>
-  <p class="cv-fallback">If the PDF does not display in your browser, <a href="https://www.dropbox.com/scl/fi/fg11s2ejsn9ytcdmrampp/cv_dur_2026-april.pdf?rlkey=pu8kifgnsjx7qjdq76kic3qb7&dl=0" target="_blank" rel="noopener">open the CV in a new tab</a>.</p>
+<section class="cv-viewer" hidden="" id="cv">
+<div class="cv-head">
+<h2>Curriculum Vitae</h2>
+<a aria-label="Close curriculum vitae" class="cv-close" href="#top">Close ×</a>
+</div>
+<div class="cv-frame-wrap">
+<iframe loading="lazy" src="https://www.dropbox.com/scl/fi/fg11s2ejsn9ytcdmrampp/cv_dur_2026-april.pdf?rlkey=pu8kifgnsjx7qjdq76kic3qb7&amp;raw=1" title="Umut Dur Curriculum Vitae"></iframe>
+</div>
+<p class="cv-fallback">If the PDF does not display in your browser, <a href="https://www.dropbox.com/scl/fi/fg11s2ejsn9ytcdmrampp/cv_dur_2026-april.pdf?rlkey=pu8kifgnsjx7qjdq76kic3qb7&amp;dl=0" rel="noopener" target="_blank">open the CV in a new tab</a>.</p>
 </section>
 <section id="research">
-<div class="sec-head"><h2>Research</h2></div>
-<div class="pub-group">
+<div class="sec-head"><h2>Research</h2></div><div class="pub-group">
+<h3 class="pub-group-title">Working Papers</h3>
+<article class="pub">
+<span class="pub-year"></span>
+<div>
+<p class="pub-title"><a href="https://ideas.repec.org/p/boc/bocoec/1050.html">Market Design for Distributional Objectives in (Re)assignment: An Application to Improve the Distribution of Teachers in Schools</a><span class="pub-status">R&amp;R · American Economic Review</span></p>
+<p class="pub-meta">with Julien Combe, Olivier Tercieux, Camille Terrier, and Utku Ünver</p>
+</div>
+</article>
+<article class="pub">
+<span class="pub-year"></span>
+<div>
+<p class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4781912">Rematching with Contracts under Labor Mobility Restrictions: Theory and Application</a><span class="pub-status">R&amp;R · Management Science</span></p>
+<p class="pub-meta">with Robert Hammond and Utku Ünver</p>
+</div>
+</article>
+<article class="pub">
+<span class="pub-year"></span>
+<div>
+<p class="pub-title"><a href="https://drive.google.com/file/d/14jmC3OjYQWBRLWmzSTo-zAjlpUelpQYh/view?usp=sharing">School Choice with Match Quality</a><span class="pub-status">R&amp;R · Journal of Political Economy: Microeconomics</span></p>
+<p class="pub-meta">with Atila Abdulkadiroglu and Aram Grigoryan</p>
+</div>
+</article>
+<article class="pub">
+<span class="pub-year"></span>
+<div>
+<p class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5186718">Market Design Approach to Saudi Arabia's Quota-Based Labor Policy</a><span class="pub-status">R&amp;R · The B.E. Journal of Theoretical Economics</span></p>
+<p class="pub-meta">with Abdullah Almeer</p>
+</div>
+</article>
+<article class="pub">
+<span class="pub-year"></span>
+<div>
+<p class="pub-title"><a href="https://drive.google.com/file/d/1wIHkH4hwuQIoq4HD9gPKfMdj0hVpAt-Q/view?usp=sharing">Who Gets the Bonus? High School Admission Reforms in China</a></p>
+<p class="pub-meta">with Onur Kesten, Tong Wang, and Congyi Zhou</p>
+</div>
+</article>
+<article class="pub">
+<span class="pub-year"></span>
+<div>
+<p class="pub-title"><a href="https://drive.google.com/file/d/17QUfSwhqk9nv-ocyWPlUi8snEgTI8c8O/view?usp=drive_link">Market Design of College-Major Switches for Reducing Student-Major Mismatch</a></p>
+<p class="pub-meta">with Yi-Cheng Kao, Scott Paiement, and Wei-Cheng Chen</p>
+</div>
+</article>
+<article class="pub">
+<span class="pub-year"></span>
+<div>
+<p class="pub-title"><a href="http://www.aysedur.com/uploads/1/0/1/8/10189079/surname__10_.pdf">The 1934 Turkish Surname Law as an Early Application of Matching Theory</a></p>
+<p class="pub-meta">with Ayse Kabukcuoglu Dur</p>
+</div>
+</article>
+</div><div class="pub-group">
 <h3 class="pub-group-title">Publications &amp; Forthcoming</h3>
 <article class="pub">
 <span class="pub-year">2026</span>
@@ -432,58 +483,8 @@ footer{border-top:1px solid var(--line);margin-top:40px}
 </div>
 </article>
 </div>
-<div class="pub-group">
-<h3 class="pub-group-title">Working Papers</h3>
-<article class="pub">
-<span class="pub-year"></span>
-<div>
-<p class="pub-title"><a href="https://ideas.repec.org/p/boc/bocoec/1050.html">Market Design for Distributional Objectives in (Re)assignment: An Application to Improve the Distribution of Teachers in Schools</a><span class="pub-status">R&amp;R · American Economic Review</span></p>
-<p class="pub-meta">with Julien Combe, Olivier Tercieux, Camille Terrier, and Utku Ünver</p>
-</div>
-</article>
-<article class="pub">
-<span class="pub-year"></span>
-<div>
-<p class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4781912">Rematching with Contracts under Labor Mobility Restrictions: Theory and Application</a><span class="pub-status">R&amp;R · Management Science</span></p>
-<p class="pub-meta">with Robert Hammond and Utku Ünver</p>
-</div>
-</article>
-<article class="pub">
-<span class="pub-year"></span>
-<div>
-<p class="pub-title"><a href="https://drive.google.com/file/d/14jmC3OjYQWBRLWmzSTo-zAjlpUelpQYh/view?usp=sharing">School Choice with Match Quality</a><span class="pub-status">R&amp;R · Journal of Political Economy: Microeconomics</span></p>
-<p class="pub-meta">with Atila Abdulkadiroglu and Aram Grigoryan</p>
-</div>
-</article>
-<article class="pub">
-<span class="pub-year"></span>
-<div>
-<p class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5186718">Market Design Approach to Saudi Arabia's Quota-Based Labor Policy</a><span class="pub-status">R&amp;R · The B.E. Journal of Theoretical Economics</span></p>
-<p class="pub-meta">with Abdullah Almeer</p>
-</div>
-</article>
-<article class="pub">
-<span class="pub-year"></span>
-<div>
-<p class="pub-title"><a href="https://drive.google.com/file/d/1wIHkH4hwuQIoq4HD9gPKfMdj0hVpAt-Q/view?usp=sharing">Who Gets the Bonus? High School Admission Reforms in China</a></p>
-<p class="pub-meta">with Onur Kesten, Tong Wang, and Congyi Zhou</p>
-</div>
-</article>
-<article class="pub">
-<span class="pub-year"></span>
-<div>
-<p class="pub-title"><a href="https://drive.google.com/file/d/17QUfSwhqk9nv-ocyWPlUi8snEgTI8c8O/view?usp=drive_link">Market Design of College-Major Switches for Reducing Student-Major Mismatch</a></p>
-<p class="pub-meta">with Yi-Cheng Kao, Scott Paiement, and Wei-Cheng Chen</p>
-</div>
-</article>
-<article class="pub">
-<span class="pub-year"></span>
-<div>
-<p class="pub-title"><a href="https://drive.google.com/file/d/1ShFXdv1UGikKr8FZsTrCHEheOf6Dx1bt/view?usp=sharing">Allocating Medical Resources During a Pandemic</a></p>
-<p class="pub-meta">with Thayer Morrill and William Phan</p>
-</div>
-</article>
-</div>
+
+
 </section>
 <section id="teaching">
 <div class="sec-head"><h2>Teaching</h2></div>
@@ -505,10 +506,9 @@ footer{border-top:1px solid var(--line);margin-top:40px}
 <div class="foot-inner">
 <span class="foot-name">Umut Dur</span>
 <a href="mailto:umutdur@gmail.com">umutdur@gmail.com</a>
-<a class="cv-toggle" href="#cv" aria-controls="cv" aria-expanded="false">CV (PDF)</a>
+<a aria-controls="cv" aria-expanded="false" class="cv-toggle" href="#cv">CV (PDF)</a>
 </div>
 </footer>
-
 <script>
 (function(){
   const cv = document.getElementById('cv');
@@ -540,6 +540,5 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   });
 })();
 </script>
-
 </body>
 </html>
