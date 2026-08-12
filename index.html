@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umut Dur — Professor of Economics, NC State University</title>
+<meta name="description" content="Umut Dur is Professor of Economics and University Faculty Scholar at North Carolina State University. Research in market design, matching theory, and game theory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1c20;
+  --paper:#fcfcfa;
+  --gray:#6b7078;
+  --line:#e4e2dc;
+  --red:#b3122f;            /* scholarly crimson, nod to Wolfpack red */
+  --red-soft:#f7e9ec;
+  --serif:"Newsreader", Georgia, serif;
+  --sans:"Inter", -apple-system, sans-serif;
+  --mono:"IBM Plex Mono", monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+::selection{background:var(--red-soft)}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(252,252,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1060px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-name{font-family:var(--serif);font-weight:600;font-size:1.15rem;text-decoration:none;letter-spacing:.01em}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.85rem;font-weight:500;text-decoration:none;color:var(--gray);letter-spacing:.02em;transition:color .15s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--red)}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+
+/* ---------- hero ---------- */
+header{max-width:1060px;margin:0 auto;padding:72px 24px 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4rem);line-height:1.05;letter-spacing:-.01em;margin-bottom:20px}
+.hero-sub{font-size:1.06rem;color:var(--gray);max-width:44ch;margin-bottom:14px}
+.hero-fields{font-family:var(--serif);font-style:italic;font-size:1.15rem;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-size:.85rem;font-weight:600;padding:11px 22px;border-radius:3px;letter-spacing:.02em;transition:all .15s}
+.btn-primary{background:var(--ink);color:var(--paper);border:1px solid var(--ink)}
+.btn-primary:hover{background:var(--red);border-color:var(--red)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+
+/* matching diagram — the signature */
+.match-fig{position:relative}
+.match-fig svg{width:100%;height:auto;display:block}
+.match-fig figcaption{font-family:var(--mono);font-size:.68rem;color:var(--gray);letter-spacing:.08em;text-transform:uppercase;margin-top:14px;text-align:center}
+.m-node{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}
+.m-node.hl{stroke:var(--red);fill:var(--red-soft)}
+.m-edge{stroke:var(--line);stroke-width:1.5;fill:none}
+.m-edge.hl{stroke:var(--red);stroke-width:2;stroke-dasharray:340;stroke-dashoffset:340;animation:draw 1.4s ease forwards}
+.m-edge.hl:nth-of-type(2){animation-delay:.25s}
+.m-label{font-family:var(--mono);font-size:11px;fill:var(--gray);letter-spacing:.08em}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .m-edge.hl{animation:none;stroke-dashoffset:0}
+}
+
+/* ---------- sections ---------- */
+section{max-width:1060px;margin:0 auto;padding:56px 24px;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
+h2{font-family:var(--serif);font-weight:500;font-size:1.9rem;letter-spacing:-.01em}
+.sec-count{font-family:var(--mono);font-size:.75rem;color:var(--gray)}
+
+/* about grid */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about-grid h3{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.edu-list{list-style:none}
+.edu-list li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.edu-list li:last-child{border-bottom:none}
+.edu-deg{font-weight:500}
+.edu-inst{color:var(--gray);font-size:.9rem}
+.edu-yr{font-family:var(--mono);font-size:.8rem;color:var(--gray);white-space:nowrap}
+
+/* ---------- publications ---------- */
+.pub-group{margin-bottom:44px}
+.pub-group:last-child{margin-bottom:0}
+h3.pub-group-title{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:8px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.pub{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:baseline}
+.pub-year{font-family:var(--mono);font-size:.8rem;color:var(--gray)}
+.pub-title{font-family:var(--serif);font-size:1.18rem;font-weight:500;line-height:1.35;margin-bottom:4px}
+.pub-title a{text-decoration:none;background-image:linear-gradient(var(--red),var(--red));background-size:0% 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .25s}
+.pub-title a:hover{color:var(--red);background-size:100% 1px}
+.pub-meta{font-size:.88rem;color:var(--gray)}
+.pub-meta em{font-style:italic}
+.pub-status{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;color:var(--red);background:var(--red-soft);padding:2px 8px;border-radius:2px;margin-left:6px;white-space:nowrap}
+.pub-extra a{font-size:.8rem;color:var(--gray);text-decoration:underline;text-underline-offset:2px}
+.pub-extra a:hover{color:var(--red)}
+
+/* ---------- teaching ---------- */
+.teach-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.course{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline}
+.course:last-child{border-bottom:none}
+.course-code{font-family:var(--mono);font-size:.8rem;color:var(--red);white-space:nowrap;min-width:74px}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);margin-top:40px}
+.foot-inner{max-width:1060px;margin:0 auto;padding:48px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px}
+.foot-inner a{color:var(--gray);font-size:.85rem;text-decoration:none}
+.foot-inner a:hover{color:var(--red)}
+.foot-name{font-family:var(--serif);font-size:1.05rem;color:var(--ink)}
+
+@media (max-width:800px){
+  header{grid-template-columns:1fr;padding-top:48px}
+  .match-fig{max-width:380px;margin:0 auto}
+  .about-grid,.teach-grid{grid-template-columns:1fr;gap:36px}
+  .pub{grid-template-columns:1fr;gap:2px}
+  .nav-links{gap:18px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Umut Dur</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="https://sites.google.com/site/umutdur/theory-seminars">Seminars</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top">
+  <div>
+    <h1>Umut Dur</h1>
+    <p class="hero-sub">Department of Economics, North Carolina State University</p>
+    <p class="hero-fields">Market design · Matching theory · Game theory</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://drive.google.com/file/d/1143LuEuwrb2oP3lli0eiITljN49EMk2O/view">Curriculum Vitae</a>
+      <a class="btn btn-ghost" href="mailto:umutdur@gmail.com">umutdur@gmail.com</a>
+    </div>
+  </div>
+  <figure class="match-fig" aria-hidden="true">
+    <svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- left column: agents -->
+      <text x="38" y="26" class="m-label">AGENTS</text>
+      <text x="252" y="26" class="m-label">OBJECTS</text>
+      <!-- edges (unmatched, faint) -->
+      <path class="m-edge" d="M78 60 C 170 60, 170 150, 262 150"/>
+      <path class="m-edge" d="M78 150 C 170 150, 170 240, 262 240"/>
+      <path class="m-edge" d="M78 240 C 170 240, 170 60, 262 60"/>
+      <path class="m-edge" d="M78 105 C 170 105, 170 195, 262 195"/>
+      <!-- matched edges, drawn in -->
+      <path class="m-edge hl" d="M78 60 C 170 60, 170 60, 262 60"/>
+      <path class="m-edge hl" d="M78 195 C 170 195, 170 105, 262 105"/>
+      <!-- nodes -->
+      <circle class="m-node hl" cx="66" cy="60" r="12"/>
+      <circle class="m-node" cx="66" cy="105" r="12"/>
+      <circle class="m-node" cx="66" cy="150" r="12"/>
+      <circle class="m-node hl" cx="66" cy="195" r="12"/>
+      <circle class="m-node" cx="66" cy="240" r="12"/>
+      <circle class="m-node hl" cx="274" cy="60" r="12"/>
+      <circle class="m-node hl" cx="274" cy="105" r="12"/>
+      <circle class="m-node" cx="274" cy="150" r="12"/>
+      <circle class="m-node" cx="274" cy="195" r="12"/>
+      <circle class="m-node" cx="274" cy="240" r="12"/>
+    </svg>
+  </figure>
+</header>
+
+<section id="about">
+  <div class="sec-head"><h2>About</h2></div>
+  <div class="about-grid">
+    <div>
+      <h3>Background</h3>
+      <p>I am a Professor of Economics and University Faculty Scholar at North Carolina State University. My research focuses on market design, matching theory, and game theory — with applications to school choice, affirmative action and reserve systems, teacher assignment, and the allocation of scarce resources.</p>
+    </div>
+    <div>
+      <h3>Education</h3>
+      <ul class="edu-list">
+        <li><span><span class="edu-deg">Ph.D. Economics</span><br><span class="edu-inst">University of Texas at Austin</span></span><span class="edu-yr">2013</span></li>
+        <li><span><span class="edu-deg">M.A. Economics</span><br><span class="edu-inst">Boğaziçi University</span></span><span class="edu-yr">2009</span></li>
+        <li><span><span class="edu-deg">B.S. Industrial Engineering</span><br><span class="edu-inst">Boğaziçi University</span></span><span class="edu-yr">2006</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="sec-head"><h2>Research</h2></div>
+
+  <div class="pub-group">
+    <h3 class="pub-group-title">Publications &amp; Forthcoming</h3>
+
+    <article class="pub">
+      <span class="pub-year">forthc.</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1buR84Oa7KJ5xiKhxyCVbVa11enxdh1Q-/view?usp=sharing">Improving the Deferred Acceptance with Minimal Compromise</a></p>
+        <p class="pub-meta">with Oguz Afacan, Arda Gitmez, and Ozgur Yilmaz · <em>Games and Economic Behavior</em></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">forthc.</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1ihfwfHU_QumUNP9asemGK4x63UJLPluS/view?usp=sharing">College Admission with Complementarities</a></p>
+        <p class="pub-meta">with Azar Abizada · <em>International Journal of Game Theory</em></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2025</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1gFacgSFU8SItLAQeGUVisb1hoaseQfd2/view?usp=sharing">Seat Allocation Problem in Public Transportation</a></p>
+        <p class="pub-meta">with Oguz Afacan and Ayse Dur · <em>The Scandinavian Journal of Economics</em></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2025</span>
+      <div>
+        <p class="pub-title"><a href="https://sites.google.com/a/ncsu.edu/msmorrill/files/MagnetAttraction_Manuscript.pdf">The Attraction of Magnet Schools: Evidence from Embedded Lotteries in School Assignment</a></p>
+        <p class="pub-meta">with Robert Hammond, Matthew Lenard, Melinda Morrill, Thayer Morrill, and Collen Paeplow · <em>Economics of Education Review</em></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2025</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0165176524006256">Wastefulness in Sequential School Choice with Public and Private Schools</a></p>
+        <p class="pub-meta">with Tommy Andersson, Sinan Ertemel, and Onur Kesten · <em>Economics Letters</em>, 247</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2024</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1p5piExziS2yyOL3opxrLEw8m8qYRHD0t/view?usp=drive_link">Capacity Design in School Choice</a></p>
+        <p class="pub-meta">with Oguz Afacan and Martin Van der Linden · <em>Games and Economic Behavior</em>, 146 · <span class="pub-extra"><a href="https://drive.google.com/file/d/1BrTO19D8rZgMMOQ5RRaiI9Af40b1RMWn/view?usp=sharing">older version</a></span></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2024</span>
+      <div>
+        <p class="pub-title">Partitionable Choice Functions and Stability</p>
+        <p class="pub-meta">with Thayer Morrill and Will Phan · <em>Social Choice and Welfare</em>, 63</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2024</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1vU9Up1kyn7g9FsglD_Y5cH7rIrXMtS2w/view?usp=sharing">Sequential School Choice with Public and Private Schools</a></p>
+        <p class="pub-meta">with Tommy Andersson, Sinan Ertemel, and Onur Kesten · <em>Social Choice and Welfare</em>, 63</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2024</span>
+      <div>
+        <p class="pub-title">Rawlsian Matching</p>
+        <p class="pub-meta">with Oguz Afacan · <em>Mathematical Social Sciences</em>, 129</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2024</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1U43GuYub7SDuTpwsk9BvEhBnmk8HJTop/view?usp=sharing">A Characterization of the Top Trading Cycles Mechanism in the School Choice Problem</a></p>
+        <p class="pub-meta">with Scott Paiment · <em>Mathematical Social Sciences</em>, 129</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2024</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1lIeUCRbBtg9ebXDK4wlnS8pcERMpyA5H/view?usp=sharing">Increasing the Representation of a Targeted Group in a Reserve System</a></p>
+        <p class="pub-meta">with Abdullah Almeer, Will Harris, Greg Hauser, William Phan, and Yanning Zhang · <em>Mathematical Social Sciences</em>, 129</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2023</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1Wvzp4bOSzciqdG9AzLP8aC7JhLuUL4Aa/view?usp=share_link">Fairness under Affirmative Action Policies with Overlapping Reserves</a></p>
+        <p class="pub-meta">with Yanning Zhang · <em>Journal of Mathematical Economics</em>, 109</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2023</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/15lIx9HhAzwB_558vJg84LYXbfBnELsh_/view?usp=sharing">Size Improvement: Is it Possible?</a></p>
+        <p class="pub-meta">with Oguz Afacan · <em>The Scandinavian Journal of Economics</em>, 125</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2023</span>
+      <div>
+        <p class="pub-title"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jpet.12605">Responsiveness to Priority-Based Affirmative Action Policy in School Choice</a></p>
+        <p class="pub-meta">with Yifan Xie · <em>Journal of Public Economic Theory</em>, 25</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2022</span>
+      <div>
+        <p class="pub-title"><a href="https://econtheory.org/ojs/index.php/te/article/viewArticle/20220089">Family Ties: School Assignment with Siblings</a></p>
+        <p class="pub-meta">with Thayer Morrill and William Phan · <em>Theoretical Economics</em>, 17</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2022</span>
+      <div>
+        <p class="pub-title"><a href="https://www.aeaweb.org/articles?id=10.1257/mic.20180386">Deduction Dilemmas: The Taiwan Assignment Mechanism</a></p>
+        <p class="pub-meta">with Parag Pathak, Fei Song, and Tayfun Sönmez · <em>American Economic Journal: Microeconomics</em>, 14</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2021</span>
+      <div>
+        <p class="pub-title"><a href="https://www.mdpi.com/2073-4336/12/2/37">School Choice with Hybrid Schedules</a></p>
+        <p class="pub-meta">with Oguz Afacan and William Harris · <em>GAMES: Special Issue on School Choice</em></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2021</span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/18XVy1UqL0_2bN4YT-pz3pSM_ecQ1coT6/view?usp=sharing">Sequential School Choice: Theory and Evidence from the Field and Lab</a></p>
+        <p class="pub-meta">with Robert Hammond and Onur Kesten · <em>Journal of Economic Theory</em>, 198</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2020</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022053118302801">Explicit vs. Statistical Targeting in Affirmative Action: Theory and Evidence from Chicago's Exam Schools</a></p>
+        <p class="pub-meta">with Parag Pathak and Tayfun Sönmez · <em>Journal of Economic Theory</em>, 187</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2020</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0899825619301046">What You Don't Know Can Help You in School Assignment</a></p>
+        <p class="pub-meta">with Thayer Morrill · <em>Games and Economic Behavior</em>, 120: 246–256</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2020</span>
+      <div>
+        <p class="pub-title"><a href="https://link.springer.com/article/10.1007/s00355-020-01252-4">Constrained Stability in Two-Sided Matching Markets</a></p>
+        <p class="pub-meta">with Oguz Afacan · <em>Social Choice and Welfare</em>, 55: 477–494</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2019</span>
+      <div>
+        <p class="pub-title"><a href="https://www.journals.uchicago.edu/doi/abs/10.1086/701358">Two-Sided Matching via Balanced Exchange</a></p>
+        <p class="pub-meta">with Utku Ünver · <em>Journal of Political Economy</em>, 127: 1156–1177</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2019</span>
+      <div>
+        <p class="pub-title"><a href="https://onlinelibrary.wiley.com/doi/pdf/10.3982/TE2482">School Choice with Partial Fairness</a></p>
+        <p class="pub-meta">with Arda Gitmez and Ozgur Yilmaz · <em>Theoretical Economics</em>, 14: 1309–1346</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2019</span>
+      <div>
+        <p class="pub-title"><a href="https://ideas.repec.org/a/spr/joecth/v68y2019i2d10.1007_s00199-018-1133-9.html">Sequential versus Simultaneous Assignment Processes and Two Applications</a></p>
+        <p class="pub-meta">with Onur Kesten · <em>Economic Theory</em>, 68: 251–283</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2019</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304406818301356">School Choice with Neighbors</a></p>
+        <p class="pub-meta">with Thomas Wiseman · <em>Journal of Mathematical Economics</em>, 83: 101–109</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2019</span>
+      <div>
+        <p class="pub-title"><a href="https://ideas.repec.org/a/eee/matsoc/v101y2019icp31-40.html">The Modified Boston Mechanism</a></p>
+        <p class="pub-meta"><em>Mathematical Social Sciences</em>, 101: 31–40</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2018</span>
+      <div>
+        <p class="pub-title"><a href="https://www.journals.uchicago.edu/doi/abs/10.1086/699974">Reserve Design: Unintended Consequences and the Demise of Boston's Walk Zones</a></p>
+        <p class="pub-meta">with Scott Kominers, Parag Pathak, and Tayfun Sönmez · <em>Journal of Political Economy</em>, 126: 2457–2479</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2018</span>
+      <div>
+        <p class="pub-title"><a href="https://link.springer.com/article/10.1007/s10683-018-9594-z">The Secure Mechanism: Theory and Experiments</a></p>
+        <p class="pub-meta">with Robert Hammond and Thayer Morrill · <em>Experimental Economics</em>, 22: 918–953 · <span class="pub-extra"><a href="http://www4.ncsu.edu/~rghammon/sBM_Supplemental_App.pdf">supplemental appendix</a></span></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2018</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0899825617301756">Competitive Equilibria in School Assignment</a></p>
+        <p class="pub-meta">with Thayer Morrill · <em>Games and Economic Behavior</em>, 108: 269–274</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2018</span>
+      <div>
+        <p class="pub-title"><a href="https://www.aeaweb.org/articles?id=10.1257/pol.20160132">Identifying the Harm of Manipulable School-Choice Mechanisms</a></p>
+        <p class="pub-meta">with Robert Hammond and Thayer Morrill · <em>American Economic Journal: Economic Policy</em>, 10(1): 187–213</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2018</span>
+      <div>
+        <p class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3219166.3219201">First-Choice Maximal and First-Choice Stable School Choice Mechanisms</a></p>
+        <p class="pub-meta">with Timo Mennle and Sven Seuken · <em>EC'18 Proceedings of the 2018 ACM Conference on Economics and Computation</em>: 251–268</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2017</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176516304827">Incompatibility of Stability and Consistency</a></p>
+        <p class="pub-meta">with Oguz Afacan · <em>Economics Letters</em>, 150: 135–137</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2017</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304406816301136">When Preference Misreporting is Harm[less]ful?</a></p>
+        <p class="pub-meta">with Oguz Afacan · <em>Journal of Mathematical Economics</em>, 72: 16–24</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year">2016</span>
+      <div>
+        <p class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S016517651630026X">Many-to-One Matchings without Substitutability</a></p>
+        <p class="pub-meta">with Devrim Ikizler · <em>Economics Letters</em>, 144: 123–126</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="pub-group">
+    <h3 class="pub-group-title">Accepted Papers</h3>
+    <article class="pub">
+      <span class="pub-year"></span>
+      <div>
+        <p class="pub-title">The Impossibility of Restricting Tradeable Priorities in School Assignment</p>
+        <p class="pub-meta">with Thayer Morrill · accepted with minor revision, <em>Journal of Mechanism and Institution Design</em></p>
+      </div>
+    </article>
+  </div>
+
+  <div class="pub-group">
+    <h3 class="pub-group-title">Working Papers</h3>
+
+    <article class="pub">
+      <span class="pub-year"></span>
+      <div>
+        <p class="pub-title"><a href="https://ideas.repec.org/p/boc/bocoec/1050.html">Market Design for Distributional Objectives in (Re)assignment: An Application to Improve the Distribution of Teachers in Schools</a><span class="pub-status">R&amp;R · American Economic Review</span></p>
+        <p class="pub-meta">with Julien Combe, Olivier Tercieux, Camille Terrier, and Utku Ünver</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year"></span>
+      <div>
+        <p class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4781912">Rematching with Contracts under Labor Mobility Restrictions: Theory and Application</a><span class="pub-status">R&amp;R · Management Science</span></p>
+        <p class="pub-meta">with Robert Hammond and Utku Ünver</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year"></span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1wIHkH4hwuQIoq4HD9gPKfMdj0hVpAt-Q/view?usp=sharing">Who Gets the Bonus? High School Admission Reforms in China</a></p>
+        <p class="pub-meta">with Onur Kesten, Tong Wang, and Congyi Zhou</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year"></span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/17QUfSwhqk9nv-ocyWPlUi8snEgTI8c8O/view?usp=drive_link">Market Design of College-Major Switches for Reducing Student-Major Mismatch</a></p>
+        <p class="pub-meta">with Yi-Cheng Kao, Scott Paiement, and Wei-Cheng Chen</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year"></span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/1ShFXdv1UGikKr8FZsTrCHEheOf6Dx1bt/view?usp=sharing">Allocating Medical Resources During a Pandemic</a></p>
+        <p class="pub-meta">with Thayer Morrill and William Phan</p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <span class="pub-year"></span>
+      <div>
+        <p class="pub-title"><a href="https://drive.google.com/file/d/14jmC3OjYQWBRLWmzSTo-zAjlpUelpQYh/view?usp=sharing">School Choice with Match Quality</a></p>
+        <p class="pub-meta">with Atila Abdulkadiroglu and Aram Grigoryan</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="sec-head"><h2>Teaching</h2></div>
+  <div class="teach-grid">
+    <div>
+      <h3 class="pub-group-title" style="margin-bottom:8px">Graduate</h3>
+      <div class="course"><span class="course-code">ECG 702</span><span>Microeconomics II</span></div>
+      <div class="course"><span class="course-code">ECG 708</span><span>Advanced Microeconomic Theory</span></div>
+      <div class="course"><span class="course-code">ECG 765</span><span>Mathematical Methods for Economics</span></div>
+      <div class="course"><span class="course-code">ECG 505</span><span>Applied Microeconomic Analysis</span></div>
+    </div>
+    <div>
+      <h3 class="pub-group-title" style="margin-bottom:8px">Undergraduate</h3>
+      <div class="course"><span class="course-code">EC 490</span><span>Research Seminar in Economics</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span class="foot-name">Umut Dur</span>
+    <a href="mailto:umutdur@gmail.com">umutdur@gmail.com</a>
+    <a href="https://drive.google.com/file/d/1143LuEuwrb2oP3lli0eiITljN49EMk2O/view">CV (PDF)</a>
+    <a href="https://sites.google.com/site/umutdur/theory-seminars">NC State Theory Seminars</a>
+  </div>
+</footer>
+
+</body>
+</html>
